@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+    <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css">
+    <link rel="stylesheet" href="https://purecss.io/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://purecss.io/layouts/pricing/styles.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/job-details.css' %}">
+</head>
+<body>
+
+<script src="https://purecss.io/js/ui.js"></script>
+
+
+<!--<div class="header">-->
+<!--    <h1>{{title}}</h1>-->
+<!--    <h2>{{short_description}}</h2>-->
+<!--</div>-->
+{% include "header.html" %}
+<div class="l-content container">
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-1 border">
+            <div class="small-box">
+                <!-- Name of the post and description -->
+                <div class="group">
+                    <div class="title-box">
+                        <div class="group-title-box smaller-text group-title">
+                            Name of the Post
+                        </div>
+                        <div class="title description-text">
+                            UP Police Sub Inspector Confidential and Asst. Sub Inspector Clerk / Accountant Recruitment
+                            2021 Apply Online for 1277 Post
+                        </div>
+                    </div>
+                    <div class="title-box">
+                        <div class="group-title-box smaller-text group-title">
+                            Job Summary
+                        </div>
+                        <div class="title description-text">
+                            Uttar Pradesh Police Recruitment and Promation Board UP PRPB Are Invited to Online
+                            Application Form for the Recruitment Post of SI Confidential and Assistant Sub Inspector
+                            Clerk and Accountant 2021. Those Candidates Are Interested to the Following Recruitment Can
+                            Read the Full Notification Before Apply Online.
+                        </div>
+                    </div>
+                </div>
+                <hr class="solid"/>
+                <!-- Important Dates -->
+                <div class="group-title-box group-title sub-section-title p1">
+                    Important Dates
+                </div>
+                <div class="group column-2">
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Application Start Date
+                        </div>
+                        <div class="title description-text p3">
+                            12/12/12
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Application ends
+                        </div>
+                        <div class="title description-text p1">
+                            12/12/14
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Last Date to pay fee
+                        </div>
+                        <div class="title description-text">
+                            12/12/14
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Exam date
+                        </div>
+                        <div class="title description-text p2">
+                            12/12/14
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Last date to download admit card
+                        </div>
+                        <div class="title description-text">
+                            12/12/14
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="solid"/>
+                <!-- Age Limit and Eligibility -->
+                <div class="group-title-box group-title sub-section-title p1">
+                    Eligibility
+                </div>
+                <div class="group column-2">
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Age Limit - General
+                        </div>
+                        <div class="title description-text">
+                            26
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Age Limit - OBC
+                        </div>
+                        <div class="title description-text">
+                            26
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Age Limit - SC/ST
+                        </div>
+                        <div class="title description-text">
+                            26
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Qualification
+                        </div>
+                        <div class="title description-text">
+                            BE/Btech
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="solid"/>
+                <!-- Application Fees -->
+                <div class="group-title-box group-title sub-section-title p1">
+                    Application Fees
+                </div>
+                <div class="group column-2">
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            For General Candidates
+                        </div>
+                        <div class="title description-text">
+                            400 Rs
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            For OBC Candidates
+                        </div>
+                        <div class="title description-text">
+                            400 Rs
+                        </div>
+                    </div>
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            For SC/ST Candidates
+                        </div>
+                        <div class="title description-text">
+                            400 Rs
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="solid"/>
+                <!-- Link to Apply -->
+                <div class="group-title-box group-title sub-section-title p1">
+                    Click for More Details
+                </div>
+                <div class="group column-2">
+                    <div class="title-box column">
+                        <div class="group-title-box smaller-text group-title">
+                            Website link
+                        </div>
+                        <div class="title description-text">
+                            <a href="">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="solid"/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

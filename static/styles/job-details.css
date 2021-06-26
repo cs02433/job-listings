@@ -1,0 +1,52 @@
+.border {
+    padding:20px;
+    background-color:white;
+    color:black;
+}
+
+.group-title {
+    font-size: 15px !important;
+    color: blue !important;
+}
+
+.description-text {
+    font-size:18px;
+
+}
+
+.title-box {
+    margin-bottom:18px;
+}
+
+.column-2 {
+    display:flex;
+    flex-flow:row;
+    flex-wrap:wrap;
+}
+
+.column {
+    width:50%;
+}
+
+hr.solid {
+  border-top: 1px solid #bbb;
+}
+
+.sub-section-title {
+    margin-bottom:20px;
+}
+
+.p1 {
+    color:red !important;
+
+}
+
+.p2 {
+    color:orange;
+
+}
+
+.p3 {
+    color:green;
+}
+

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+    <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css">
+    <link rel="stylesheet" href="https://purecss.io/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://purecss.io/layouts/pricing/styles.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+</head>
+<body>
+
+<script src="https://purecss.io/js/ui.js"></script>
+
+
+<div class="header">
+    <h1>{{title}}</h1>
+    <h2>{{short_description}}</h2>
+</div>
+<div class="l-content container">
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-1">
+            <div class="pricing-table-free">
+                <div class="small-box">
+                    <div class="section-title">Job Details</div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-1-5"><p>Exam</p></div>
+                            <div class="pure-u-4-5"><p>{{title}}</p></div>
+                            <div class="pure-u-1-5"><p>Eligibility</p></div>
+                            <div class="pure-u-4-5"><p>{{eligibility}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pricing-table-free">
+                <div class="box">
+                    <div class="section-title">Important Dates</div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-3-5"><p>Application Begin</p></div>
+                            <div class="pure-u-2-5"><p>{{start_date_to_apply}}</p></div>
+                            <div class="pure-u-3-5"><p>Last Date for Registration</p></div>
+                            <div class="pure-u-2-5"><p>{{end_date_to_apply}}</p></div>
+                            <div class="pure-u-3-5"><p>Last Date for Fee Payment</p></div>
+                            <div class="pure-u-2-5"><p>{{last_date_to_fee_payment}}1</p></div>
+                            <div class="pure-u-3-5"><p>Exam Date</p></div>
+                            <div class="pure-u-2-5"><p>{{exam_date}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pricing-table-free">
+                <div class="box">
+                    <div class="section-title">Application Fees</div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-3-5"><p>General / OBC</p></div>
+                            <div class="pure-u-2-5"><p>{{general_application_fees}}</p></div>
+                            <div class="pure-u-3-5"><p>SC / ST</p></div>
+                            <div class="pure-u-2-5"><p>{{sc_st_application_fees}}</p></div>
+                            <div class="pure-u-3-5"><p>PH (Dviyang)</p></div>
+                            <div class="pure-u-2-5"><p>{{ph_application_fees}}</p></div>
+                            <div class="pure-u-1-1"><span>{{how_to_pay_fees}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-1">
+            <div class="pricing-table-free">
+                <div class="small-box">
+                    <div class="section-title">Age Limit</div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-1-5"><p>Minimum Age</p></div>
+                            <div class="pure-u-4-5"><p>{{minimum_age}}</p></div>
+                            <div class="pure-u-1-5"><p>Maximum Age</p></div>
+                            <div class="pure-u-4-5"><p>{{maximum_age}}</p></div>
+                            <div class="pure-u-1-5"><p>Age Relaxation</p></div>
+                            <div class="pure-u-4-5"><p>{{age_relaxation}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-1">
+            <div class="pricing-table-free">
+                <div class="small-box">
+                    <div class="section-title">How To Apply</div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-1-1"><p>{{how_to_apply}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Insolvency Information | Avoid Defaults</title>
+    <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css">
+    <link rel="stylesheet" href="https://purecss.io//layouts/side-menu/styles.css">
+    <link rel="stylesheet" href="{% static 'styles/left-navigation.css' %}">
+</head>
+<body>
+
+<script src="https://purecss.io/js/ui.js"></script>
+
+<div id="layout">
+
+    {% include "left-navigation.html" %}
+
+    <div id="main">
+        <div class="header">
+            <h1>Legal Star</h1>
+            <h2>Find crucial information to act at right time</h2>
+        </div>
+
+        <div class="content">
+            <form class="pure-form" method="post" action="/upload-customers-csv/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input class="pure-input-rounded" type="file" name="files[]" id="file"
+                       data-multiple-caption="{count} files selected" multiple/>
+                <input type="submit">Submit
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
