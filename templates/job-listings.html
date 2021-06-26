@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css">
+    <link rel="stylesheet" href="https://purecss.io/css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://purecss.io/layouts/pricing/styles.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/card.css' %}">
+</head>
+<body>
+<script src="https://purecss.io/js/ui.js"></script>
+{% include "header.html" %}
+<div class="l-content container">
+    <div class="pure-g">
+        <div class="pure-u-1 pure-u-md-1-1">
+            <div class="pricing-table-free">
+                {%for job in jobs%}
+                <div class="small-box">
+                    <div class="group">
+                        <div class="title-box">
+                            <div class="group-title-box smaller-text">
+                                Teacher
+                            </div>
+                            <div class="title extra-large-text">
+                                {{job.title}}
+                            </div>
+                        </div>
+                        <div class="icon-box">
+                            <img src="https://images1.livehindustan.com/uploadimage/library/2020/11/06/16_9/16_9_1/ssc_chsl_notification_1604647704.jpg"
+                                 alt="SSC CHSL Exam 2020 2021 : Check Exam Guidelines Admit Card ID Proof Self  Declaration Form instructions - SSC CHSL Exam 2020 : परीक्षा केंद्र जाने से  पहले पढ़ लें एसएससी सीएचएसएल एग्जाम गाइडलाइंस"
+                                 >
+                        </div>
+                    </div>
+                    <div class="section-info">
+                        <div class="pure-g">
+                            <div class="pure-u-1-6 heading smaller-text"><p>Description</p></div>
+                            <div class="pure-u-5-6"><p>{{job.title}}</p></div>
+                            <div class="pure-u-1-6 heading smaller-text"><p>Eligibility</p></div>
+                            <div class="pure-u-5-6"><p>{{job.eligibility}}</p></div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <div class="start date">
+                            <div class="title smaller-text">
+                                Application Start Date
+                            </div>
+                            <div class="date-value large-text">
+                                {{job.start_date_to_apply}}
+                            </div>
+                        </div>
+                        <div class="end date">
+                            <div class="title smaller-text">
+                                Application End Date
+                            </div>
+                            <div class="date-value large-text">
+                                {{job.end_date_to_apply}}
+                            </div>
+                        </div>
+                        <div class="action large-text">
+                            <div class="link">
+                                <a href="/jobs/{{job.unique_url_id}}">Click Here for Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
