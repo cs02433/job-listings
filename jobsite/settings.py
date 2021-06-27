@@ -25,7 +25,7 @@ SECRET_KEY = '0r-mo$5f@w3_a@f&16(mg!%^6--qp#qcdpsuocnffe=gkbwlc#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['indian-government-job-listing.azurewebsites.net']
 
 
 # Application definition
