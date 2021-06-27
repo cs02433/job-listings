@@ -8,6 +8,7 @@
 
 .group {
    display:flex;
+   flex-wrap:wrap;
    padding-left:1em;
 }
 
@@ -132,5 +133,18 @@
 .date {
     width: 100%;
 }
+.title-box {
+    width: auto;
+}
+
+
+.icon-box {
+   width:100%;
+}
+
+.title-box {
+   width:100%;
+}
+
 
 }

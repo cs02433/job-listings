@@ -21,13 +21,12 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
 
   .container {
     width:80%;
-    color: lightblue;
+}
+.extra-large-text {
+    font-size: 20px !important;
 }
 
 }
