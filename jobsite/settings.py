@@ -11,15 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
-import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-from django.conf import settings
-from django.conf.urls.static import static
-from django.urls import path, include
-
-from jobmodel import admin
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -28,10 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0r-mo$5f@w3_a@f&16(mg!%^6--qp#qcdpsuocnffe=gkbwlc#'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['indian-government-job-listing.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -120,19 +110,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+DEBUG = False
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-urlpatterns = [
-        path('jobsite/', include('jobsite.urls')),
-        path('admin/', admin.site.urls),
-    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
-# DEBUG = False
-
-# mimetypes.add_type('text/css', '.css')

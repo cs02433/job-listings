@@ -1,0 +1,37 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 9;
+  grid-row: 1;
+  height: 100px;
+  background-color:#ecf3f2
+}
+
+
+body {
+  background-color:#e8e5e1
+}
+
+
+.container {
+    grid-column: 1 / 9;
+    grid-row: 2;
+    display:flex;
+    flex-flow: row nowrap;
+    min-width:800px;
+}
+
+.left-navigation {
+    width:200px;
+     flex: 0 20%;
+     border:1px solid black;
+}
+
+.main-content {
+    border:1px solid black;
+}
+
