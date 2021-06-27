@@ -11,13 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
 import mimetypes
-
-from django.conf import settings
-from django.conf.urls.static import static
-
-mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -129,6 +123,4 @@ STATICFILES_DIRS = [
 
 DEBUG = False
 
-urlpatterns = [
-    'https://indian-government-job-listing.azurewebsites.net/'
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+mimetypes.add_type('text/css', '.css')
