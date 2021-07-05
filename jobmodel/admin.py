@@ -8,7 +8,7 @@ from jobmodel.models import Job, JobSourceWebsite, JobForm
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
     form = JobForm
-    list_display = ("title", "short_description", "url")
+    list_display = ("title", "short_description")
 
 
 @admin.register(JobSourceWebsite)
