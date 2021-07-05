@@ -22,11 +22,13 @@
             <div class="pricing-table-free">
                 {%for job in jobs%}
                 <div class="small-box">
-                    <div class="group">
+                    <div class="group company-logo">
                         <div class="icon-box">
-                            <img src="https://images1.livehindustan.com/uploadimage/library/2020/11/06/16_9/16_9_1/ssc_chsl_notification_1604647704.jpg"
-                                 alt="SSC CHSL Exam 2020 2021 : Check Exam Guidelines Admit Card ID Proof Self  Declaration Form instructions - SSC CHSL Exam 2020 : परीक्षा केंद्र जाने से  पहले पढ़ लें एसएससी सीएचएसएल एग्जाम गाइडलाइंस"
-                            >
+                            <img src={{job.logo_url}}
+                                 alt={{job.title}}>
+                        </div>
+                        <div class="title extra-large-text">
+                            {{job.company}}
                         </div>
                     </div>
                     <div class="group">
@@ -46,7 +48,11 @@
                                 Eligibility
                             </div>
                             <div class="title extra-large-text">
+                                {% if "http" in job.eligibility %}
+                                <a href={{job.eligibility}}>Click Here</a>
+                                {% else %}
                                 {{job.eligibility}}
+                                {% endif %}
                             </div>
                         </div>
 

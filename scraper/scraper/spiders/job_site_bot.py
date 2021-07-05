@@ -1,5 +1,4 @@
 import scrapy
-from scraper.scraper.items import JobItem
 
 
 class JobSiteBotSpider(scrapy.Spider):
@@ -15,15 +14,17 @@ class JobSiteBotSpider(scrapy.Spider):
     def parse_dir_contents(self, response):
         text = response.css("div table:nth-child(1) tr:nth-child(1) td:nth-child(1)::text").extract()
         if len(text) > 0 and "Name of Post:" in text[0]:
-            item = JobItem()
+            item = {}
             item["title"] = response.css("table table:nth-child(1) h1::text").extract_first()
             item['short_description'] = response.css(
                 "table table:nth-child(1) tr:nth-child(4)>td:nth-child(2)::text").extract_first()
 
             imortant_dates = response.css(
                 "table table:nth-child(3) tr:nth-child(2) td:nth-child(1)>ul li>b::text").extract()
-            item['start_date_to_apply'] = imortant_dates[0]
-            item['end_date_to_apply'] = imortant_dates[1]
+            if len(imortant_dates) > 0:
+                item['start_date_to_apply'] = imortant_dates[0]
+            if len(imortant_dates) > 1:
+                item['end_date_to_apply'] = imortant_dates[1]
 
             fees = response.css(
                 "table table:nth-child(3) tr:nth-child(2) td:nth-child(2)>ul li>b::text").extract()
@@ -57,6 +58,6 @@ class JobSiteBotSpider(scrapy.Spider):
             item['eligibility'] = eligibility_and_exam
 
             item['is_goverment_job'] = True
-            item['unique_url_id'] = item["title"].replace(' ', "-").replace(",", "")
-            item.save()
+            # item['unique_url_id'] = item["title"].replace(' ', "-").replace(",", "")
+            # item.save()
             yield item

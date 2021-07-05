@@ -2,9 +2,10 @@
     text-align: center;
     font-family: "SF Pro Display","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
     display:flex;
-    background-color:#1c1f4a;
-    color:white;
+    background-color: white;
+    color:blue;
     width:100%;
+    margin-bottom:5px;
 }
 
 .company-title {
@@ -12,7 +13,7 @@
     text-align: center;
 }
 .logo {
-    width:140px;
+    margin:0px;
 }
 
 
