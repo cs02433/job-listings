@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-    <title>Responsive Side Menu &ndash; Layout Examples &ndash; Pure</title>
+    <title>{{title}}</title>
+    <link rel="icon" href=
+            "{% static 'img/logo-icon.png' %}"
+          type="image/x-icon">
     <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css" type="text/css">
     <link rel="stylesheet" href="https://purecss.io/css/pure/grids-responsive-min.css" type="text/css">
     <link rel="stylesheet" href="https://purecss.io/layouts/pricing/styles.css" type="text/css">
@@ -116,21 +119,14 @@
                             {{age}}
                         </div>
                     </div>
-                    <div class="title-box column">
-                        <div class="group-title-box smaller-text group-title">
-                            Age Relaxations
-                        </div>
-                        <div class="title description-text">
-                            {{age_relaxation}}
-                        </div>
-                    </div>
+
 
                     <div class="title-box column">
                         <div class="group-title-box smaller-text group-title">
                             Qualification
                         </div>
                         <div class="title description-text">
-                            <a href={{notification_url}}>Click Here to know eligibility</a>
+                            {{qualification}}
                         </div>
                     </div>
                 </div>
@@ -143,7 +139,7 @@
                 <div class="group column-2">
                     <div class="title-box column">
                         <div class="group-title-box smaller-text group-title">
-                            For General Candidates
+                            Application Fees
                         </div>
                         <div class="title description-text">
                             {{application_fees}}

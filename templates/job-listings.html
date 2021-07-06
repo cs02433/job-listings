@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
           content="A layout example with a side menu that hides on mobile, just like the Pure website.">
-    <title>Job Listings</title>
+    <title>Indian Government Jobs | Apply Here</title>
+    <link rel="icon" href=
+            "{% static 'img/logo-icon.png' %}"
+          type="image/x-icon">
     <link rel="stylesheet" href="https://purecss.io/css/pure/pure-min.css" type="text/css">
     <link rel="stylesheet" href="https://purecss.io/css/pure/grids-responsive-min.css" type="text/css">
     <link rel="stylesheet" href="https://purecss.io/layouts/pricing/styles.css" type="text/css">
@@ -21,7 +24,8 @@
         <div class="pure-u-1 pure-u-md-1-1">
             <div class="pricing-table-free">
                 {%for job in jobs%}
-                <div class="small-box">
+
+                <div class="small-box {% cycle 'white' 'grey' %}">
                     <div class="group company-logo">
                         <div class="icon-box">
                             <img src={{job.logo_url}}
@@ -48,10 +52,10 @@
                                 Eligibility
                             </div>
                             <div class="title extra-large-text">
-                                {% if "http" in job.eligibility %}
+                                {% if "http" in job.qualification %}
                                 <a href={{job.eligibility}}>Click Here</a>
                                 {% else %}
-                                {{job.eligibility}}
+                                {{job.qualification}}
                                 {% endif %}
                             </div>
                         </div>

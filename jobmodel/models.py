@@ -16,8 +16,6 @@ class Job(models.Model):
     unique_url_id = models.CharField(max_length=500, default="")
     application_fees = models.CharField(max_length=1000, default="N/A")
 
-    eligibility = models.CharField(max_length=1000, default="")
-
     start_date_to_apply = models.CharField(max_length=500, default="")
     end_date_to_apply = models.CharField(max_length=500, default="")
 
@@ -25,7 +23,6 @@ class Job(models.Model):
     exam_date = models.CharField(max_length=100, default="")
 
     age = models.CharField(max_length=1000, default="N/A")
-    age_relaxation = models.CharField(max_length=1000, default="")
 
     notification_url = models.CharField(max_length=500)
     application_form_url = models.CharField(max_length=500)
@@ -48,14 +45,12 @@ class JobForm(forms.ModelForm):
     unique_url_id = forms.CharField(initial="N/A", widget=forms.Textarea(attrs={'rows': 5, 'cols': 100}))
     application_fees = forms.CharField(initial="N/A", widget=forms.Textarea(attrs={'rows': 5, 'cols': 100}))
 
-    eligibility = forms.CharField(initial="N/A", widget=forms.Textarea(attrs={'rows': 5, 'cols': 100}))
     exam_date = forms.CharField(initial="")
 
     last_date_to_fee_payment = forms.CharField()
     start_date_to_apply = forms.CharField()
     end_date_to_apply = forms.CharField()
     age = forms.CharField(initial="N/A", widget=forms.Textarea(attrs={'rows': 5, 'cols': 100}))
-    age_relaxation = forms.CharField(initial="N/A", widget=forms.Textarea(attrs={'rows': 5, 'cols': 100}))
 
     notification_url = forms.URLField()
     application_form_url = forms.URLField()
